@@ -3,18 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <script src="JQ.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="design.css">
     <title>MP1</title>
 </head>
-<body>
-    <h1>My Blog</h1>
+<body onload="loadData()">
     <script>
-        var root = 'https://jsonplaceholder.typicode.com';
-            $.ajax({
-                url: root + '/posts/2',
-                method: 'GET'
-            }).then(function(data) {
-                console.log(data);
-            });
+        console.log($(window).width()); // max -> 875px, min -> 504px
+        console.log($(window).height()); // max -> 781px
     </script>
+    <nav>
+        <ul>
+            <li>Home</li>
+            &nbsp;&nbsp;
+            <li><a onclick="alert('Welcome to the Fakes.');">About</a></li>
+            &nbsp;&nbsp;
+            <li>Photos</li>
+        </ul>
+    </nav>
+    <h3>Modern Day-to-Day Life of Fakes</h3>
+    <br>
+    <p id="recentPostMark">Recent Posts</p>
+    <div>
+        <br>
+        <div class="profilePic">
+
+        </div>
+    </div>
+    <br>
+    <div>
+        <br>
+        <div class="profilePic">
+
+
+        </div>
+
+    </div>
+    <br>
+    <div>
+        <br>
+        <div class="profilePic">
+
+
+        </div>
+    </div>
+    <br>
+    <div>
+        <br>
+        <div class="profilePic">
+
+
+        </div>
+    </div>
 </body>
 </html>
