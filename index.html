@@ -4,56 +4,117 @@
     <meta charset="UTF-8">
     <script src="JQ.js"></script>
     <script src="script.js"></script>
+    <script src="https://use.fontawesome.com/02c5c7a1d8.js"></script>
+    <link rel="stylesheet" href="font-awesome.min.css">
     <link rel="stylesheet" href="design.css">
     <title>MP1</title>
 </head>
 <body onload="loadData()">
     <script>
-        console.log($(window).width()); // max -> 875px, min -> 504px
-        console.log($(window).height()); // max -> 781px
+        console.log($(window).width());
+        console.log($(window).height());
     </script>
     <nav>
         <ul>
-            <li>Home</li>
+            <li onclick="alert('Under Maintenance')" style="cursor: pointer">Home</li>
             &nbsp;&nbsp;
-            <li><a onclick="alert('Welcome to the Fakes.');">About</a></li>
+            <li onclick="alert('I am an HTML, CSS, Javascript Developer and Swift\nWelcome to the Fakes.') " style="cursor: pointer">About</li>
             &nbsp;&nbsp;
-            <li>Photos</li>
+            <li onfocus="" onclick="alert('Under Maintenance')" style="cursor: pointer">Photos</li>
+            &nbsp;&nbsp;
+            <li class="fa fa-search"></li>
         </ul>
     </nav>
-    <h3>Modern Day-to-Day Life of Fakes</h3>
-    <br>
+    <a id="listBtn" class="fa fa-list fa-2x" style="cursor: pointer" onclick="hideBackground()"></a>
+    <span class="sr-only"></span>
+    <h3 id="mainTitle">Modern Day-to-Day Life of Fakes</h3>
+    <p id="motto">An example social media web app written by some dude who ❤️ the web. </p>
+    <hr>
+    <div id="grayhidebackground"></div>
     <p id="recentPostMark">Recent Posts</p>
-    <div>
-        <br>
-        <div class="profilePic">
+    <section id="posts">
+        <article class="post">
+            <br>
+            <div class="profilePic" onclick="goToProfile()" style="cursor: pointer">
 
-        </div>
-    </div>
+            </div>
+        </article>
+        <br>
+        <article>
+            <br>
+            <div class="profilePic" onclick="goToProfile()" style="cursor: pointer">
+
+
+            </div>
+
+        </article>
+        <br>
+        <article>
+            <br>
+            <div class="profilePic" onclick="goToProfile()" style="cursor: pointer">
+
+
+            </div>
+        </article>
+        <br>
+        <article>
+            <br>
+            <div class="profilePic" onclick="goToProfile()" style="cursor: pointer">
+
+
+            </div>
+        </article>
+        <br>
+        <article>
+            <br>
+            <div class="profilePic" onclick="goToProfile()" style="cursor: pointer">
+
+
+            </div>
+        </article>
+        <br>
+        <article>
+            <br>
+            <div class="profilePic" onclick="goToProfile()" style="cursor: pointer">
+
+
+            </div>
+        </article>
+        <br>
+        <article>
+            <br>
+            <div class="profilePic" onclick="goToProfile()" style="cursor: pointer">
+
+
+            </div>
+        </article>
+        <br>
+        <article>
+            <br>
+            <div class="profilePic" onclick="goToProfile()" style="cursor: pointer">
+
+
+            </div>
+        </article>
+        <br>
+        <article>
+            <br>
+            <div class="profilePic" onclick="goToProfile()" style="cursor: pointer">
+
+
+            </div>
+        </article>
+        <br>
+        <article>
+            <br>
+            <div class="profilePic" onclick="goToProfile()" style="cursor: pointer">
+
+            </div>
+        </article>
+    </section>
     <br>
-    <div>
-        <br>
-        <div class="profilePic">
-
-
-        </div>
-
-    </div>
-    <br>
-    <div>
-        <br>
-        <div class="profilePic">
-
-
-        </div>
-    </div>
-    <br>
-    <div>
-        <br>
-        <div class="profilePic">
-
-
-        </div>
-    </div>
+    <footer>
+        <button id="loadPostsBtn" onclick="viewMorePosts()">Load More Posts</button>
+    </footer>
 </body>
 </html>
