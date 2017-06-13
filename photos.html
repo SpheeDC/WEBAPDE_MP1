@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <script src="https://use.fontawesome.com/02c5c7a1d8.js"></script>
+    <title>Photos</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            &nbsp;&nbsp;
+            <li onclick="alert('I am an HTML, CSS, Javascript Developer and Swift soon. :)\nWelcome to the Fakes.') " style="cursor: pointer">About</li>
+            &nbsp;&nbsp;
+            <li><a href="photos.html">Photos</a></li>
+            &nbsp;&nbsp;
+            <li class="fa fa-search" style="cursor: pointer"></li>
+    </ul>
+    </nav>
+    <a id="listBtn" class="fa fa-list fa-2x" style="cursor: pointer" onclick="hideBackground()"></a>
+    <span class="sr-only"></span>
+   <h3 id="mainTitle">Modern Day-to-Day Life of Fakes</h3>
+    <p id="motto">An example social media web app written by some dude who ❤️ the web. </p>
+    <hr>
+    <div id="grayonhover"></div>
+    <p id="recentPostMark">Photos</p>
+    <br>
+    <div id="centeringButton">
+        <button id="loadPostsBtn" onclick="viewMorePhotos()">Load More Photos</button>
+    </div>
+    <footer>
+        ©️ Seril, 2017. All rights reserved somehow. :)
+        &nbsp;&nbsp;&nbsp;
+        <a class="fa fa-chevron-up fa-5x" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"></a>
+    </footer>
+</body>
+</html>

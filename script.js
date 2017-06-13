@@ -73,6 +73,9 @@ function hideBackground() {
     document.getElementById('listBtn').style.color = "black";
 }*/
 
+function viewMorePhotos() {
+
+}
 function goToProfile() {
     console.log("I'm clicked.");
 }

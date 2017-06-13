@@ -3,7 +3,6 @@ article {
     height: 150px;
     background-color: green;
 }
-
 #motto {
     text-align: center;
     color: gray;
@@ -43,7 +42,19 @@ div.profilePic {
     border-radius: 10px;
     background-color: darkgoldenrod;
 }
-
+@media screen and (width: 375px) and (height: 667px) {
+    a[class*="fa-list"] {
+        top: 50px;
+    }
+}
+@media screen and (width: 414px) and (height: 736px) {
+    #mainTitle {
+        font-size: 30px;
+    }
+    a[class*="fa-list"] {
+        top: 50px;
+    }
+}
 @media screen and (max-width: 1050px) {
     nav ul {
         display: none;
@@ -63,20 +74,36 @@ div.profilePic {
     text-align: center;
 }
 
-#loadPostsBtn {
-    position: relative;
+#loadPostsBtn, footer {
     color: blue;
     font-family: "Helvetica Neue", sans-serif;
-    font-size: 20px;
-    padding: 10px;
-    margin: auto;
+    font-size: 15px;
+    padding: 20px;
     text-align: center;
-    align-content: center;
 }
 
-#grayhidebackground {
+footer {
+    color: gray;
+    font-size: smaller;
+}
+
+#grayonhover {
     background-color: gray;
     width: 100%;
     height: 100%;
     display: none;
+}
+
+a[class*="fa fa-chevron-up"] {
+    position: absolute;
+    right: 20px;
+    top: 2000px;
+}
+
+#centeringButton {
+    text-align: center;
+}
+
+a:visited {
+    color: black;
 }
