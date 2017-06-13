@@ -46,8 +46,16 @@ function getPost(id) {
 }
 
 function viewMorePosts() {
-    //var postsSection = document.getElementById('posts');
+    var postsSection = document.getElementById('postSection');
     for (var i = 1; i <= 10; i++) {
+        postsSection.appendChild(document.createElement("BR"));
+        var newarticle = document.createElement("ARTICLE");
+        var profilePhoto = document.createElement("DIV");
+        profilePhoto.setAttribute("class", "profilePic");
+        profilePhoto.setAttribute("style", "cursor: pointer");
+        newarticle.appendChild(document.createElement("BR"));
+        newarticle.appendChild(profilePhoto);
+        postsSection.appendChild(newarticle);
         /*
          <br>
          <article>

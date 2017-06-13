@@ -94,12 +94,6 @@ footer {
     display: none;
 }
 
-a[class*="fa fa-chevron-up"] {
-    position: absolute;
-    right: 20px;
-    top: 2000px;
-}
-
 #centeringButton {
     text-align: center;
 }
