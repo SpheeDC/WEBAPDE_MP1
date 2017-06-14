@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="JQ.js"></script>
-    <script src="script.js"></script>
+    <script src="Scripts/JQ.js"></script>
+    <script src="Scripts/script.js"></script>
     <script src="https://use.fontawesome.com/02c5c7a1d8.js"></script>
-    <link rel="stylesheet" href="font-awesome.min.css">
-    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="Stylesheets/font-awesome.min.css">
+    <link rel="stylesheet" href="Stylesheets/commondesign.css">
+    <link rel="stylesheet" href="Stylesheets/homepage.css">
     <title>Home</title>
 </head>
 <body onload="loadData()">
@@ -18,9 +19,11 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             &nbsp;&nbsp;
-            <li onclick="alert('I am an HTML, CSS, Javascript Developer and Swift soon. :)\nWelcome to the Fakes.') " style="cursor: pointer">About</li>
+            <li onclick="alert('We are the HTML, CSS, Javascript Developers and Swift soon. :)\nWelcome to the Fakes.') " style="cursor: pointer">About</li>
             &nbsp;&nbsp;
             <li><a href="photos.html">Photos</a></li>
+            &nbsp;&nbsp;
+            <li>Albums</li>
             &nbsp;&nbsp;
             <li class="fa fa-search" style="cursor: pointer"></li>
         </ul>
@@ -33,90 +36,174 @@
     <div id="grayonhover"></div>
     <p id="recentPostMark">Recent Posts</p>
     <section id="postSection">
-        <article class="post">
+        <div class="leftColumn">
             <br>
-            <div class="profilePic" onclick="goToProfile()" style="cursor: pointer">
+            <div class="profilePic">
 
             </div>
-            <p>Hi</p>
-        </article>
+            <div class="content">
+                <p class="username">
+                    Paolo
+                </p>
+                <br>
+                <p class="actualPost">
+
+                </p>
+            </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;
+        <div class="leftColumn">
+            <br>
+            <div class="profilePic">
+
+            </div>
+            <div class="content">
+                <p class="username">
+                    Paolo
+                </p>
+                <br>
+                <p class="actualPost">
+
+                </p>
+            </div>
+        </div>
         <br>
-        <article>
+        <div class="leftColumn">
             <br>
-            <div class="profilePic" onclick="goToProfile()" style="cursor: pointer">
-
+            <div class="profilePic">
 
             </div>
-        </article>
+            <div class="content">
+                <p class="username">
+                    Paolo
+                </p>
+                <br>
+                <p class="actualPost">
+
+                </p>
+            </div>
+        </div>
         <br>
-        <article>
+        <div class="leftColumn">
             <br>
-            <div class="profilePic" onclick="goToProfile()" style="cursor: pointer">
-
+            <div class="profilePic">
 
             </div>
-        </article>
+            <div class="content">
+                <p class="username">
+                    Paolo
+                </p>
+                <br>
+                <p class="actualPost">
+
+                </p>
+            </div>
+        </div>
         <br>
-        <article>
+        <div class="leftColumn">
             <br>
-            <div class="profilePic" onclick="goToProfile()" style="cursor: pointer">
-
+            <div class="profilePic">
 
             </div>
-        </article>
+            <div class="content">
+                <p class="username">
+                    Paolo
+                </p>
+                <br>
+                <p class="actualPost">
+
+                </p>
+            </div>
+        </div>
         <br>
-        <article>
+        <div class="leftColumn">
             <br>
-            <div class="profilePic" onclick="goToProfile()" style="cursor: pointer">
-
+            <div class="profilePic">
 
             </div>
-        </article>
+            <div class="content">
+                <p class="username">
+                    Paolo
+                </p>
+                <br>
+                <p class="actualPost">
+
+                </p>
+            </div>
+        </div>
         <br>
-        <article>
+        <div class="leftColumn">
             <br>
-            <div class="profilePic" onclick="goToProfile()" style="cursor: pointer">
-
+            <div class="profilePic">
 
             </div>
-        </article>
+            <div class="content">
+                <p class="username">
+                    Paolo
+                </p>
+                <br>
+                <p class="actualPost">
+
+                </p>
+            </div>
+        </div>
         <br>
-        <article>
+        <div class="leftColumn">
             <br>
-            <div class="profilePic" onclick="goToProfile()" style="cursor: pointer">
-
+            <div class="profilePic">
 
             </div>
-        </article>
+            <div class="content">
+                <p class="username">
+                    Paolo
+                </p>
+                <br>
+                <p class="actualPost">
+
+                </p>
+            </div>
+        </div>
         <br>
-        <article>
+        <div class="leftColumn">
             <br>
-            <div class="profilePic" onclick="goToProfile()" style="cursor: pointer">
-
+            <div class="profilePic">
 
             </div>
-        </article>
+            <div class="content">
+                <p class="username">
+                    Paolo
+                </p>
+                <br>
+                <p class="actualPost">
+
+                </p>
+            </div>
+        </div>
         <br>
-        <article>
+        <div class="leftColumn">
             <br>
-            <div class="profilePic" onclick="goToProfile()" style="cursor: pointer">
-
+            <div class="profilePic">
 
             </div>
-        </article>
-        <br>
-        <article>
-            <br>
-            <div class="profilePic" onclick="goToProfile()" style="cursor: pointer">
+            <div class="content">
+                <p class="username">
+                    Paolo
+                </p>
+                <br>
+                <p class="actualPost">
 
+                </p>
             </div>
-        </article>
+        </div>
     </section>
-    <br>
+    <br><br>
     <div id="centeringButton">
         <button id="loadPostsBtn" onclick="viewMorePosts()">Load More Posts</button>
     </div>
     <footer>
+        <a class="fa fa-facebook fa-2x"></a>
+        <a class="fa fa-twitter fa-2x"></a>
+        <a class="fa fa-instagram fa-2x"></a>
         ©️ Seril, 2017. All rights reserved somehow. :)
         &nbsp;&nbsp;&nbsp;
         <a class="fa fa-chevron-up fa-5x" style="cursor: pointer" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"></a>

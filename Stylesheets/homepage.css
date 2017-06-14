@@ -1,0 +1,40 @@
+.leftColumn {
+    float: left;
+    position: relative;
+    width: 48%;
+    height: inherit;
+    background-color: green;
+    border-style: solid;
+    border-color: white;
+    border-width: thick;
+}
+
+section {
+    height: 100%;
+}
+/*
+.content, .username, .actualPost {
+    color: black;
+    font-family: "Helvetica Neue", sans-serif;
+}
+.content {
+
+}
+
+.username {
+
+}
+
+.actualPost {
+
+}
+*/
+div.profilePic {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    left: 20px;
+    padding: 30px 15px;
+    border-radius: 10px;
+    background-color: darkgoldenrod;
+}
