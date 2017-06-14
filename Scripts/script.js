@@ -12,8 +12,8 @@ function loadData() {
     for (var i = 1; i <= 10; i++) {
         getUser(i);
     }
-    for (var j = 1; j <= 100; j++) {
-        getPost(j);
+    for (var j = 1; j <= 10; j++) {
+        getPostsOfUser(j);
     }
 }
 function getUser(id) {
@@ -25,16 +25,15 @@ function getUser(id) {
     });
 }
 
-function getPost(id) {
+function getPostsOfUser(id) {
     $.ajax({
-        url: root + '/posts/' + id,
+        url: root + '/users/' + id + '/posts',
         method: 'GET'
     }).then(function (data) {
-        /*for (var i = 0; i < users.length; i++) {
-                // return the JSON object of the user, title and content
-            }
-        }*/
-        posts.push(data);
+        posts.push({
+            "userId": "Hello", // not actual userId :)
+            "userPosts": data
+        });
     })
 }
 
@@ -63,9 +62,10 @@ function hideBackground() {
     document.getElementById('listBtn').style.color = "black";
 }*/
 
-function goToProfile(userID) {
+/*function goToProfile(userID) {
     console.log("I'm clicked.");
 }
+*/
 
 
 

@@ -1,12 +1,33 @@
 .leftColumn {
     float: left;
     position: relative;
-    width: 48%;
+    width: 49%;
     height: inherit;
     background-color: green;
     border-style: solid;
     border-color: white;
     border-width: thick;
+}
+
+.profilePic, .content {
+    display: inline-block;
+}
+
+.content {
+
+}
+
+.username , .actualPost {
+    color: white;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+.username {
+    font-size: 34px;
+}
+
+.actualPost {
+    font-size: 15px;
 }
 
 section {

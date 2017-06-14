@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="Stylesheets/homepage.css">
     <title>Home</title>
 </head>
-<body onload="loadData()">
+<body>
     <script>
         console.log($(window).width());
         console.log($(window).height());
+
+        $(document).ready(loadData());
     </script>
     <nav>
         <ul>
@@ -51,7 +53,6 @@
                 </p>
             </div>
         </div>
-        &nbsp;&nbsp;&nbsp;
         <div class="leftColumn">
             <br>
             <div class="profilePic">
@@ -67,7 +68,6 @@
                 </p>
             </div>
         </div>
-        <br>
         <div class="leftColumn">
             <br>
             <div class="profilePic">
