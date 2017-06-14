@@ -1,12 +1,15 @@
 /**
  * Created by paoloandreiseril on 6/10/17.
  */
-// id is the namedCounter
 var root = 'https://jsonplaceholder.typicode.com';
 // users JSON array should contain all info from /users JSON objects
 var users = [];
 // contains id of post, user who made the post, and the content
 var posts = [];
+
+function about() {
+    alert('We are the HTML, CSS, Javascript Developers and Swift soon. :)\nWelcome to the Fakes.');
+}
 
 function loadData() {
     for (var i = 1; i <= 10; i++) {
@@ -37,19 +40,9 @@ function getPostsOfUser(id) {
     })
 }
 
+// should make use of document.createElement(), and element.setAttribute()
 function viewMorePosts() {
-    /* Format:
-     <br>
-        <article>
-            <br>
-            <div class="profilePic">
 
-
-            </div>
-
-        </article>
-     <br>
-     */
 }
 
 function hideBackground() {
