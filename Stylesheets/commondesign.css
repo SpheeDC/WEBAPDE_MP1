@@ -5,12 +5,6 @@
 #mainTitle {
     font-family: "Raleway", sans-serif;
 }
-a[class*="fa fa-list"] {
-    position: absolute;
-    right: 15px;
-    top: 25px;
-    display: none;
-}
 
 nav ul {
     position: absolute;
@@ -54,10 +48,6 @@ h3#mainTitle {
 @media screen and (max-width: 1250px){
     nav ul {
         display: none;
-    }
-    a[class*="fa-list"] {
-        display: block;
-        top: 50px;
     }
 }
 
