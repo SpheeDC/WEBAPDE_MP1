@@ -12,31 +12,30 @@ function about() {
 }
 
 function loadData() {
-    for (var i = 1; i <= 10; i++) {
-        getUser(i);
+    getAllUsers();
+
+    for (var i = 1; i <= 9; i++) {
+        document.getElementById('name' + i).innerHTML = users[i - 1].attr("username");
     }
-    for (var j = 1; j <= 10; j++) {
-        getPostsOfUser(j);
-    }
+
+    // set up the posts
 }
-function getUser(id) {
+function getAllUsers() {
     $.ajax({
-        url: root + '/users/' + id,
+        url: root + '/users/',
         method: 'GET'
     }).then(function(data) {
-        users.push(data);
+        users = data;
     });
 }
 
+// for the profile of each user
 function getPostsOfUser(id) {
     $.ajax({
         url: root + '/users/' + id + '/posts',
         method: 'GET'
     }).then(function (data) {
-        posts.push({
-            "userId": "Hello", // not actual userId :)
-            "userPosts": data
-        });
+
     })
 }
 

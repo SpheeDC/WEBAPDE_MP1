@@ -3,18 +3,25 @@
     position: relative;
     width: 49%;
     height: inherit;
-    background-color: green;
+    background-color: yellowgreen;
     border-style: solid;
     border-color: white;
     border-width: thick;
 }
 
 .profilePic, .content {
+    position: absolute;
     display: inline-block;
 }
 
-.content {
+.profilePic {
+    bottom: 4px;
+    background-image: url("http://placehold.it/150/ee0a7e");
+}
 
+.content {
+    top: 12px;
+    left: 160px;
 }
 
 .username , .actualPost {
@@ -23,7 +30,7 @@
 }
 
 .username {
-    font-size: 34px;
+    font-size: 20px;
 }
 
 .actualPost {

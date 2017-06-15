@@ -2,6 +2,9 @@
     text-align: center;
     color: gray;
 }
+#mainTitle {
+    font-family: "Raleway", sans-serif;
+}
 a[class*="fa fa-list"] {
     position: absolute;
     right: 15px;
@@ -19,12 +22,11 @@ nav ul {
 
 nav ul li {
     display: inline;
-    font-family: "Helvetica Neue", sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: larger;
 }
 
 h3#mainTitle {
-    font-family: Arial, sans-serif;
     font-size: x-large;
     text-align: center;
 }
