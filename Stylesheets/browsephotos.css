@@ -2,10 +2,11 @@
     background-color: green;
     width: inherit;
     height: inherit;
+    padding: 10px;
 }
 .pic {
-    background-color: yellow;
-    width: 250px;
-    height: 250px;
+    width: inherit;
+    height: inherit;
     display: inline;
+    padding: 15px 15px;
 }
