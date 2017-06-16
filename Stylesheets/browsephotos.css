@@ -8,5 +8,7 @@
     width: inherit;
     height: inherit;
     display: inline;
-    padding: 15px 15px;
+    padding: 15px;
+    border-style: solid;
+    border-color: lightblue;
 }

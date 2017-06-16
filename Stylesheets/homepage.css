@@ -3,7 +3,7 @@
     position: relative;
     width: 49%;
     height: inherit;
-    background-color: yellowgreen;
+    background-color: cornflowerblue;
     border-style: solid;
     border-color: white;
     border-width: thick;
@@ -15,13 +15,16 @@
 }
 
 .profilePic {
+    border-style: solid;
+    border-color: blue;
+    border-width: thick;
     bottom: 4px;
     background-image: url("http://placehold.it/150/ee0a7e");
 }
 
 .content {
     top: 12px;
-    left: 160px;
+    left: 170px;
 }
 
 .username , .actualPost {
