@@ -19,28 +19,11 @@
     </script>
     <nav>
         <ul>
-            <li><a href="index.html" name="Home"><img src="Images/home.png"></a></li>
+            <li><a href="index.html" title="Home"><img src="Images/home.png"></a></li>
             &nbsp;&nbsp;
-            <li> <div class="dropdown">
-                <button class="dropBtn"><img src="Images/about-us.png"></button>
-                <div class="dropdown_content">
-                    <a href="#">User 1</a>
-                    <a href="#">User 2</a>
-                    <a href="#">User 3</a>
-                    <a href="#">User 4</a>
-                    <a href="#">User 5</a>
-                    <a href="#">User 6</a>
-                    <a href="#">User 7</a>
-                    <a href="#">User 8</a>
-                    <a href="#">User 9</a>
-                    <a href="#">User 10</a>
-                </div>
-            </div></li>
-            &nbsp;&nbsp;
-            <li><a href="photos.html" name="Photos"><img src="Images/picture.png"></a></li>
+            <li><a href="photos.html" title="Photos"><img src="Images/picture.png"></a></li>
             &nbsp;&nbsp;
             <li><img src="Images/photo-album.png" name="Albums"></li>
-            &nbsp;&nbsp;
         </ul>
     </nav>
     <h3 id="mainTitle">Modern Day-to-Day Life of Fakes</h3>
@@ -48,6 +31,26 @@
     <div id="grayonhover"></div>
     <p id="recentPostMark">Recent Posts</p>
     <section id="postSection">
+        <script>
+            /*
+                Create elements in JS.
+                Format: <br>
+                        <div class="leftcolumn>
+                        <div class="profilePic">
+                            <img of the user>
+                        </div>
+                        <div class="content">
+                            <p class="username">
+
+                            </p>
+                            <p id="post" + ctr class="actualPost">
+
+                            </p>
+                         </div>
+                      </div>
+                      then repeat.
+             */
+        </script>
         <div class="leftColumn">
             <br>
             <div class="profilePic">
@@ -204,20 +207,16 @@
             </div>
         </div>
     </section>
-    <br><br>
+    <br><br>    <br>
+
     <div id="centeringButton">
         <button id="loadPostsBtn" onclick="viewMorePosts()">Load More Posts</button>
     </div>
     <footer>
-        <a class="fa fa-facebook fa-2x"></a>
-        <a class="fa fa-twitter fa-2x"></a>
-        <a class="fa fa-instagram fa-2x"></a>
         ©️ Seril, 2017. All rights reserved somehow. :)
         &nbsp;&nbsp;&nbsp;
-        <a onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" name="Move Up"><img src="Images/chevron-up.png"> </a>
-        <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-        <div>Icons made by <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-        <div>Icons made by <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+        <a onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" title="Move Up"><img src="Images/chevron-up.png"> </a>
+        <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a>, <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> and <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
     </footer>
 </body>
 </html>

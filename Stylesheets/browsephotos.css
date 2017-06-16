@@ -3,12 +3,12 @@
     width: inherit;
     height: inherit;
     padding: 10px;
+    border-color: #55bfff;
+    border-style: solid;
 }
 .pic {
     width: inherit;
     height: inherit;
     display: inline;
     padding: 15px;
-    border-style: solid;
-    border-color: lightblue;
 }

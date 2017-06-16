@@ -5,7 +5,7 @@
     height: inherit;
     background-color: cornflowerblue;
     border-style: solid;
-    border-color: white;
+    border-color: rgba(100, 126, 252, 2.5);
     border-width: thick;
 }
 
