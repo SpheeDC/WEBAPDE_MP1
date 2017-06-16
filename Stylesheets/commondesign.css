@@ -10,14 +10,12 @@ nav ul {
     position: absolute;
     right: 30px;
     top: 70px;
-    display: inline;
     list-style-type: none;
+    padding: 20px 5px;
 }
 
 nav ul li {
     display: inline;
-    font-family: 'Raleway', sans-serif;
-    font-size: larger;
 }
 
 h3#mainTitle {
@@ -47,7 +45,11 @@ h3#mainTitle {
 /* For all other sizes other than for desktop & tablet */
 @media screen and (max-width: 1250px){
     nav ul {
-        display: none;
+        text-align: center;
+    }
+
+    nav ul li {
+
     }
 }
 

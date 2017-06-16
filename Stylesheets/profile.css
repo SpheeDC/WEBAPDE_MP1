@@ -1,0 +1,12 @@
+.profile {
+    width: inherit;
+    height: inherit;
+    background-color: cornflowerblue;
+}
+
+.profileImage, .posts {
+    display: inline-block;
+}
+
+
+
