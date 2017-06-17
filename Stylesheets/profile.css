@@ -1,11 +1,26 @@
 .profile {
-    width: inherit;
-    height: inherit;
-    background-color: cornflowerblue;
+    width: auto;
+    height: auto;
+    background-color: deepskyblue;
+    padding-top: 20px;
 }
 
 .profileImage, .posts {
     display: inline-block;
+}
+
+
+.profileImage {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    left: 20px;
+
+    border-color: lawngreen;
+    border-style: solid;
+    border-width: thick;
+    border-radius: 125px;
+    background-color: aqua;
 }
 
 

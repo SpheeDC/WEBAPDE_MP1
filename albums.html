@@ -11,6 +11,41 @@
     <title>Albums</title>
 </head>
 <body>
-
+    <script>
+        $(document).ready(loadPhotos());
+    </script>
+    <nav>
+        <ul>
+            <li><a href="index.html" title="Home"><img src="Images/home.png"></a></li>
+            &nbsp;&nbsp;
+            <li><a href="photos.html" title="Photos"><img src="Images/picture.png"></a></li>
+            &nbsp;&nbsp;
+            <li><img src="Images/photo-album.png" name="Albums"></li>
+        </ul>
+    </nav>
+    <h3 id="mainTitle">Modern Day-to-Day Life of Fakes</h3>
+    <p id="motto">An example social media web app written by some dude who ❤️ the web. </p>
+    <div id="grayonhover"></div>
+    <p id="recentPostMark">Photos</p>
+    <br>
+    <div id="photocontainer">
+        <script>
+            /*
+             Format: <div class="pic">
+                      <img src="whatever src from the JSON array">
+                      </div>
+            */
+        </script>
+    </div>
+    <br>
+    <div id="centeringButton">
+        <button id="loadPostsBtn" onclick="viewMorePhotos()">Load More Photos</button>
+    </div>
+    <footer>
+        ©️ Seril, 2017. All rights reserved somehow. :)
+        &nbsp;&nbsp;&nbsp;
+        <a onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" title="Move Up"><img src="Images/chevron-up.png"> </a>
+        <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a>, <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> and <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    </footer>
 </body>
 </html>
