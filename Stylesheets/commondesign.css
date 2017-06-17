@@ -45,12 +45,13 @@ h3#mainTitle {
     }
 }
 /* For all other sizes other than for desktop & tablet */
-@media screen and (max-width: 1250px){
+@media screen and (max-width: 1000px){
     nav ul {
-        text-align: center;
+        display: none;
     }
 
     nav ul li {
+        display: none;
 
     }
 }
