@@ -5,6 +5,7 @@ body {
 #motto {
     text-align: center;
     color: white;
+    font-family: "Helvetica Neue", sans-serif;
 }
 nav ul {
     position: absolute;

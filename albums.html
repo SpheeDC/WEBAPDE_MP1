@@ -7,12 +7,13 @@
     <script src="https://use.fontawesome.com/02c5c7a1d8.js"></script>
     <link rel="stylesheet" href="Stylesheets/font-awesome.min.css">
     <link rel="stylesheet" href="Stylesheets/commondesign.css">
+    <link rel="stylesheet" href="Stylesheets/albums.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
     <title>Albums</title>
 </head>
 <body>
     <script>
-        $(document).ready(loadPhotos());
+        $(document).ready(loadAlbums());
     </script>
     <nav>
         <ul>
@@ -20,21 +21,16 @@
             &nbsp;&nbsp;
             <li><a href="photos.html" title="Photos"><img src="Images/picture.png"></a></li>
             &nbsp;&nbsp;
-            <li><img src="Images/photo-album.png" name="Albums"></li>
+            <li><a href="albums.html" title="Albums"><img src="Images/photo-album.png"></a></li>
         </ul>
     </nav>
     <h3 id="mainTitle">Modern Day-to-Day Life of Fakes</h3>
     <p id="motto">An example social media web app written by some dude who ❤️ the web. </p>
     <div id="grayonhover"></div>
-    <p id="recentPostMark">Photos</p>
+    <p id="recentPostMark">Albums</p>
     <br>
     <div id="photocontainer">
         <script>
-            /*
-             Format: <div class="pic">
-                      <img src="whatever src from the JSON array">
-                      </div>
-            */
         </script>
     </div>
     <br>

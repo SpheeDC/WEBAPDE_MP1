@@ -1,12 +1,17 @@
 .leftColumn {
+    overflow-x: auto;
+    overflow-y: auto;
     float: left;
     position: relative;
     width: 49%;
     height: inherit;
+    padding: 2px;
     background-color: cornflowerblue;
     border-style: solid;
     border-color: rgba(100, 126, 252, 2.5);
-    border-width: thick;
+    border-width: medium;
+    margin-left: -5px;
+
 }
 
 .profilePic, .content {
@@ -23,43 +28,30 @@
 }
 
 .content {
-    top: 12px;
+    top: -10px;
     left: 170px;
 }
 
-.username , .actualPost {
+.username , .actualPost, .title {
     color: white;
     font-family: "Helvetica Neue", sans-serif;
 }
 
 .username {
-    font-size: 20px;
+    font-size: 35px;
 }
 
 .actualPost {
-    font-size: 15px;
+    font-size: 20px;
+}
+
+.title {
+    font-size: 27px;
 }
 
 section {
     height: 100%;
 }
-/*
-.content, .username, .actualPost {
-    color: black;
-    font-family: "Helvetica Neue", sans-serif;
-}
-.content {
-
-}
-
-.username {
-
-}
-
-.actualPost {
-
-}
-*/
 div.profilePic {
     position: relative;
     width: 100px;
