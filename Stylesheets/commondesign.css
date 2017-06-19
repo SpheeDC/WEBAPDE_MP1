@@ -93,6 +93,10 @@ footer a {
     color: greenyellow;
 }
 
+footer a:visited {
+    color: greenyellow;
+}
+
 #grayonhover {
     height: inherit;
     width: inherit;

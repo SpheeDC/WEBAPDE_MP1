@@ -17,6 +17,7 @@ function loadData() {
         $("#post" + i).text(posts[i]['body']);
     }
     counter += 10;
+    console.log(counter);
 }
 function getAllUsers() {
     "use strict";
@@ -53,7 +54,7 @@ function getPostsOfUser(id) {
 // should make use of document.createElement(), and element.setAttribute()
 function viewMorePosts() {
     if (counter === 100) {
-        alert("No more posts to show.\nSad!");
+        alert("No more posts to show.");
     }
     else {
         

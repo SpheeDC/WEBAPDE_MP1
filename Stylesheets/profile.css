@@ -3,10 +3,18 @@
     height: auto;
     background-color: deepskyblue;
     padding-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .profileImage, .profileInformation {
     display: inline-block;
+}
+
+.profileInformation {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
 }
 
 
@@ -21,14 +29,18 @@
     border-width: thick;
     border-radius: 125px;
 }
+.profileInformation {
+    position: absolute;
+    left: 300px;
+    font-family: "Helvetica Neue", sans-serif;
+    color: azure;
+    font-size: 25px;
+}
 
 .header {
     font-family: "Helvetica Neue", sans-serif;
     font-size: 50px;
-    position: absolute;
-    left: 40px;
     color: lawngreen;
 }
-
 
 
