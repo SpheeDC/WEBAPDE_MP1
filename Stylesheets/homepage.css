@@ -19,12 +19,12 @@
     display: inline-block;
 }
 
-.profilePic {
+.profilePic  {
     border-style: solid;
     border-color: blue;
     border-width: thick;
+    background-image: url("http://placehold.it/150/24f355");
     bottom: 4px;
-    background-image: url("http://placehold.it/150/ee0a7e");
 }
 
 .content {

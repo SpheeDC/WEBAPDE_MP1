@@ -14,6 +14,7 @@ function loadData() {
     // show only the first 10 posts
     for (var i = 0; i <= 9; i++) {
         $("#title" + i).text(posts[i]['title']);
+        var newuser = getUser(posts[i]['userId']);
         $("#post" + i).text(posts[i]['body']);
     }
     counter += 10;
@@ -40,6 +41,12 @@ function getAllPosts() {
 
 function getUser(userId) {
     // function body to follow
+    for (var i = 0; i < users.length; i++) {
+        if (users[i]['id'] === userId) {
+            return users[i];
+        }
+    }
+    return null;
 }
 // for the profile of each user
 function getPostsOfUser(id) {
