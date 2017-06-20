@@ -2,7 +2,7 @@
     width: auto;
     height: auto;
     background-color: deepskyblue;
-    padding-top: 20px;
+    padding: 20px;
     display: flex;
     flex-flow: row wrap;
 }
