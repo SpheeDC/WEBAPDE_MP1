@@ -29,7 +29,7 @@
     border-width: thick;
     border-radius: 125px;
 }
-.profileInformation {
+.profileInformation, span {
     position: absolute;
     left: 300px;
     font-family: "Helvetica Neue", sans-serif;

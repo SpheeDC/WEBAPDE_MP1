@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <script src="Scripts/JQ.js"></script>
     <script src="Scripts/script.js"></script>
+    <script src="Scripts/profile.js"></script>
     <link rel="stylesheet" href="Stylesheets/font-awesome.min.css">
     <link rel="stylesheet" href="Stylesheets/commondesign.css">
     <link rel="stylesheet" href="Stylesheets/profile.css">
@@ -11,9 +12,6 @@
     <title id="nameOfUser">Name Of User</title>
 </head>
 <body>
-    <script>
-        $(document).ready();
-    </script>
     <nav>
         <ul>
         <li><a href="index.html" title="Home"><img src="Images/home.png"></a></li>
@@ -32,13 +30,13 @@
             
         </div>
         <div class="profileInformation">
-            <p id="fullName">Full Name</p>
-            <p id="userName">Username: </p>
-            <p id="email">Email: </p>
-            <p id="address">Address: </p>
-            <p id="phoneNumber">Phone Number:</p>
-            <p id="website">Website:</p>
-            <p id="company">Company:</p>
+            <p>Full Name <span id="fullName"></span></p>
+            <p>Username: <span id="userName"></span></p>
+            <p>Email: <span id="email"></span></p>
+            <p>Address: <span id="address"></span></p>
+            <p>Phone Number: <span id="phoneNumber"></span></p>
+            <p>Website: <span id="website"></span></p>
+            <p>Company: <span id="company"></span></p>
         </div>
         <p id="postHeader" class="header">Posts</p>
         <div class="posts">
