@@ -51,7 +51,8 @@ function loadPosts() {
          </div>
          */
         var postSectionP = document.getElementById('postSection');
-        for (var i = 0; i < data.length; i++) {
+        // show the first 10 posts only
+        for (var i = 0; i <= 9; i++) {
             var mainContent = data[i]['body'];
             //var userIdP = getUser(data[i]['userId']);
 
@@ -84,9 +85,12 @@ function loadPosts() {
             contentDiv.appendChild(titlep);
             contentDiv.appendChild(actualPostp);
 
-            postSectionP.appendChild(contentDiv);
+            newdiv.appendChild(profileImageDiv);
+            newdiv.appendChild(contentDiv);
+
+            postSectionP.appendChild(newdiv);
         }
-    })
+    });
 }
 
 function getUser(userId) {
