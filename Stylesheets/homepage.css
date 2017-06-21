@@ -2,26 +2,16 @@
     position: relative;
     margin: auto;
     width: 60%;
-    height: 300px;
+    height: 450px;
     background-color: cornflowerblue;
     border: thick solid rgba(100, 126, 252, 2.5);
 }
 
-.profilePic, .content {
+.content {
     position: absolute;
     display: inline-block;
-}
-
-.profilePic {
-    border: thick solid blue;
-    background-image: url("http://placehold.it/150/24f355");
-    bottom: 4px;
-    word-wrap: break-word;
-}
-
-.content {
     top: -10px;
-    left: 170px;
+    left: 20px;
 }
 
 .username , .actualPost, .title {
@@ -44,12 +34,18 @@
 section {
     height: 100%;
 }
-div.profilePic {
-    position: relative;
-    width: 100px;
-    height: 50px;
-    left: 20px;
-    padding: 30px 15px;
-    border-radius: 10px;
-    background-color: darkgoldenrod;
+
+/* tablet sizes */
+@media screen and (min-width: 415px) and (max-width: 1366px) {
+    .leftColumn {
+        height: 300px;
+    }
+}
+
+/* iPhone sizes */
+@media screen and (min-width: 350px) and (max-height: 736px) {
+    .leftColumn {
+        width: 75%;
+        height: 400px;
+    }
 }

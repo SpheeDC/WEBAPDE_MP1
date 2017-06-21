@@ -38,8 +38,7 @@ function loadPosts() {
         // show the first 10 posts only
         for (var i = 0; i <= 9; i++) {
 
-            console.log(getUser(data[i]['userId']));
-            var name = getUser(data[i]['userId']);
+            var name = getUser(data[i]['userId'], getActualUser);
             var mainContent = data[i]['body'];
             var mainTitle = data[i]['title'];
 
@@ -50,9 +49,6 @@ function loadPosts() {
             var newdiv = document.createElement('div');
             newdiv.setAttribute('class', 'leftColumn');
             newdiv.appendChild(document.createElement('br'));
-            var profileImageDiv = document.createElement('div');
-            profileImageDiv.setAttribute('class', 'profilePic');
-
             var contentDiv = document.createElement('div');
             contentDiv.setAttribute('class', 'content');
 
@@ -72,7 +68,6 @@ function loadPosts() {
             contentDiv.appendChild(titlep);
             contentDiv.appendChild(actualPostp);
 
-            newdiv.appendChild(profileImageDiv);
             newdiv.appendChild(contentDiv);
 
             postSectionP.appendChild(newdiv);
@@ -81,13 +76,16 @@ function loadPosts() {
     });
 }
 
-function getUser(userId) {
+function getActualUser(User) {
+    return User;
+}
+function getUser(userId, callback) {
     $.ajax({
         url: root + "/users/" + userId,
         method: 'GET'
-    }).then(function (e) {
-        return e.username;
-    });
+    }).then(function (data) {
+        callback(data);
+    })
 }
 // for the profile of each user
 function getPostsOfUser(id) {
@@ -115,7 +113,7 @@ function viewMorePosts() {
                 var mainContent = data[i]['body'];
                 var mainTitle = data[i]['title'];
 
-                var nameOfUser = document.createTextNode("@" + getUser(data[i]["userId"]));
+                var nameOfUser = document.createTextNode("@" + getUser(data[i]["userId"], getActualUser));
                 var realTitle = document.createTextNode(mainTitle);
                 var contentReal = document.createTextNode(mainContent);
 
