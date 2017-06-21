@@ -2,7 +2,9 @@
  * Created by paoloandreiseril on 6/10/17.
  */
 var root = 'https://jsonplaceholder.typicode.com';
+// to keep track of the number of posts that are currently displayed
 var counter = 0;
+
 function loadData() {
     loadPosts();
     // show only the first 10 posts
@@ -35,10 +37,18 @@ function loadPosts() {
         var postSectionP = document.getElementById('postSection');
         // show the first 10 posts only
         for (var i = 0; i <= 9; i++) {
+
+            var name = $.ajax({
+                url: root + "/users/" + data[i]['userId'],
+                method: 'GET'
+            }).then(function (e) {
+                //noinspection JSAnnotator
+                this = e.username;
+            });
             var mainContent = data[i]['body'];
             var mainTitle = data[i]['title'];
 
-            var nameOfUser = document.createTextNode("@" + getUser(data[i]["userId"]));
+            var nameOfUser = document.createTextNode("@" + name);
             var realTitle = document.createTextNode(mainTitle);
             var contentReal = document.createTextNode(mainContent);
 
@@ -76,16 +86,7 @@ function loadPosts() {
     });
 }
 
-function getName(User) {
-    return User.username;
-}
 function getUser(userId) {
-    var User;
-    $.ajax({
-        url: root + "/users/" + userId,
-        method: 'GET'
-        }
-    ).then();
 }
 // for the profile of each user
 function getPostsOfUser(id) {
@@ -148,13 +149,14 @@ function viewMorePosts() {
                 postSectionP.appendChild(newdiv);
                 postSectionP.appendChild(document.createElement('br'));
             }
-        })
+        });
+        counter += 10;
     }
 }
 /*function goToProfile(userID) {
-    console.log("I'm clicked.");
-}
-*/
+ console.log("I'm clicked.");
+ }
+ */
 
 
 

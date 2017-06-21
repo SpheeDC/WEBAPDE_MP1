@@ -2,8 +2,7 @@
     position: relative;
     margin: auto;
     width: 60%;
-    height: auto;
-    padding: inherit;
+    height: 300px;
     background-color: cornflowerblue;
     border: thick solid rgba(100, 126, 252, 2.5);
 }
