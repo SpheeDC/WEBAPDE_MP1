@@ -38,13 +38,8 @@ function loadPosts() {
         // show the first 10 posts only
         for (var i = 0; i <= 9; i++) {
 
-            var name = $.ajax({
-                url: root + "/users/" + data[i]['userId'],
-                method: 'GET'
-            }).then(function (e) {
-                //noinspection JSAnnotator
-                this = e.username;
-            });
+            console.log(getUser(data[i]['userId']));
+            var name = getUser(data[i]['userId']);
             var mainContent = data[i]['body'];
             var mainTitle = data[i]['title'];
 
@@ -87,6 +82,12 @@ function loadPosts() {
 }
 
 function getUser(userId) {
+    $.ajax({
+        url: root + "/users/" + userId,
+        method: 'GET'
+    }).then(function (e) {
+        return e.username;
+    });
 }
 // for the profile of each user
 function getPostsOfUser(id) {
