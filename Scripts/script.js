@@ -4,6 +4,7 @@
 var root = 'https://jsonplaceholder.typicode.com';
 // to keep track of the number of posts that are currently displayed
 var counter = 0;
+var username;
 
 function loadData() {
     loadPosts();
@@ -38,11 +39,11 @@ function loadPosts() {
         // show the first 10 posts only
         for (var i = 0; i <= 9; i++) {
 
-            var name = getUser(data[i]['userId'], getActualUser);
+            getUser(data[i]['userId']);
             var mainContent = data[i]['body'];
             var mainTitle = data[i]['title'];
 
-            var nameOfUser = document.createTextNode("@" + name);
+            var nameOfUser = document.createTextNode("@" + username);
             var realTitle = document.createTextNode(mainTitle);
             var contentReal = document.createTextNode(mainContent);
 
@@ -55,6 +56,17 @@ function loadPosts() {
             var usernamep = document.createElement('p');
             usernamep.setAttribute('class', 'username');
             usernamep.appendChild(nameOfUser);
+
+            $(usernamep).hover(function () {
+                $(this).css("cursor", "pointer");
+                $(this).css("color", "green");
+                $(this).click(function () {
+                    window.location.href = "userprofile.html";
+                    //loadUserProfile(data[i]);
+                });
+            }, function () {
+                $(this).css("color", "white");
+            });
 
             var titlep = document.createElement('p');
             titlep.setAttribute('class', 'title');
@@ -75,16 +87,12 @@ function loadPosts() {
         }
     });
 }
-
-function getActualUser(User) {
-    return User;
-}
-function getUser(userId, callback) {
+function getUser(userId) {
     $.ajax({
         url: root + "/users/" + userId,
         method: 'GET'
     }).then(function (data) {
-        callback(data);
+        username = data['username'];
     })
 }
 // for the profile of each user
@@ -109,11 +117,13 @@ function viewMorePosts() {
             url: root + "/posts/",
             method: 'GET'
         }).then(function (data) {
-            for (var i = counter; i < counter + counter; i++) {
+            for (var i = counter; i < counter + 10; i++) {
+
+                getUser(data[i]['userId']);
                 var mainContent = data[i]['body'];
                 var mainTitle = data[i]['title'];
 
-                var nameOfUser = document.createTextNode("@" + getUser(data[i]["userId"], getActualUser));
+                var nameOfUser = document.createTextNode("@" + username);
                 var realTitle = document.createTextNode(mainTitle);
                 var contentReal = document.createTextNode(mainContent);
 
@@ -129,6 +139,17 @@ function viewMorePosts() {
                 var usernamep = document.createElement('p');
                 usernamep.setAttribute('class', 'username');
                 usernamep.appendChild(nameOfUser);
+
+                $(usernamep).hover(function () {
+                    $(this).css("cursor", "pointer");
+                    $(this).css("color", "green");
+                    $(this).click(function () {
+                        window.location.href = "userprofile.html";
+                        //loadUserProfile(data[i]);
+                    });
+                }, function () {
+                    $(this).css("color", "white");
+                });
 
                 var titlep = document.createElement('p');
                 titlep.setAttribute('class', 'title');

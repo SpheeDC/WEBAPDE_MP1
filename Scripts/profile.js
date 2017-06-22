@@ -30,5 +30,4 @@ function loadUserProfile(User) {
     var bsb = User.company.bs;
 
     // load the User object into each of the divs / containers
-
 }

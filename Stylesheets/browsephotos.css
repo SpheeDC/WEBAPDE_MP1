@@ -1,13 +1,17 @@
 #photocontainer {
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: 5px;
     text-align: center;
 }
 .pic {
     width: inherit;
     height: inherit;
     display: inline;
-    padding: 30px;
+}
 
+.pic img {
+    border-color: white;
+    border-style: solid;
+    padding: 10px;
 }

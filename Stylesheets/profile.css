@@ -6,29 +6,10 @@
     display: flex;
     flex-flow: row wrap;
 }
-
-.profileImage, .profileInformation {
+.profileInformation {
     display: inline-block;
 }
 
-.profileInformation {
-    display: flex;
-    flex-direction: column;
-    flex-flow: column wrap;
-}
-
-
-.profileImage {
-    width: 250px;
-    height: 250px;
-    position: relative;
-    left: 20px;
-
-    border-color: lawngreen;
-    border-style: solid;
-    border-width: thick;
-    border-radius: 125px;
-}
 .profileInformation, span {
     position: absolute;
     left: 300px;

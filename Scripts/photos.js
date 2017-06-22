@@ -1,29 +1,35 @@
-var photos = [];
 var counter = 0;
-
+var root = 'https://jsonplaceholder.typicode.com';
 function loadPhotos() {
     // get all photos first from the fake server and store it in a local JSON array
     $.ajax({
-        "url": root + '/photos',
-        "method": 'GET'
+        url: root + '/photos',
+        method: 'GET'
     }).then(function(data) {
         console.log("I passed thru here.");
-        photos = data;
+        var photoc = document.getElementById('photocontainer');
+        // place in the first 10 photos in each specified div .class
+        for (var i = 0; i < 10; i++) {
+            var newdiv = document.createElement('div');
+            newdiv.setAttribute('class', 'pic');
+            var image = document.createElement('img');
+            image.src = data[i]['thumbnailUrl'];
+
+            // add hover on the newdiv
+
+            $(newdiv).hover(function () {
+                $(this).css("cursor", "pointer");
+               $(this).css("-webkit-filter", "grayscale(75%)");
+               $(this).css("filter", "grayscale(75%)");
+            }, function () {
+                $(this).css("-webkit-filter", "grayscale(0%)");
+                $(this).css("filter", "grayscale(0%)");
+            });
+            newdiv.appendChild(image);
+            photoc.appendChild(newdiv);
+        }
     });
-
-    var photoc = document.getElementById('photocontainer');
-    // place in the first 10 photos in each specified div .class
-    for (var i = 1; i <= 10; i++) {
-        var newdiv = document.createElement('div');
-        newdiv.setAttribute('class', 'pic');
-        var img = document.createElement('img');
-        img.src = photos[i - 1]['thumbnailUrl'];
-        newdiv.appendChild(img);
-        photoc.appendChild(newdiv);
-    }
-
     counter += 10;
-
 }
 function viewMorePhotos() {
     // place in the next 9 photos to view
@@ -35,25 +41,42 @@ function viewMorePhotos() {
         alert("No more photos to show.");
     }
     else {
-        var photoc = document.getElementById('photocontainer');
-        for (var i = 1; i <= 10; i++) {
-            var newdiv = document.createElement('div');
-            newdiv.setAttribute('class', 'pic');
-            var img = document.createElement('img');
-            img.src = 'Images/picture-placeholder.png';
-            newdiv.appendChild(img);
-            photoc.appendChild(newdiv);
-        }
+        $.ajax({
+            url: root + '/photos',
+            method: 'GET'
+        }).then(function(data) {
+            console.log("I passed thru here.");
+            var photoc = document.getElementById('photocontainer');
+            // place in the next 20 photos in each specified div .class
+            for (var i = counter; i < counter + 20; i++) {
+                var newdiv = document.createElement('div');
+                newdiv.setAttribute('class', 'pic');
+                var image = document.createElement('img');
+                image.src = data[i]['thumbnailUrl'];
 
-        counter += 10;
+                // add hover and also a pointer cursor on the image
+
+                $(image).hover(function () {
+                    $(this).css("cursor", "pointer");
+                    $(this).css("-webkit-filter", "grayscale(100%)");
+                    $(this).css("filter", "grayscale(100%)");
+                }, function () {
+                    $(this).css("-webkit-filter", "grayscale(0%)");
+                    $(this).css("filter", "grayscale(0%)");
+                });
+                newdiv.appendChild(image);
+                photoc.appendChild(newdiv);
+            }
+        });
+        counter += 20;
     }
 }
 
-function getAllPhotosFrom(albumId) {
+function getAlbumName(albumId) {
     $.ajax({
-        "url": root + '/albums' + albumId + '/photos',
-        "method": 'GET'
-    }).then(function(data) {
-        return data;
+        url: root + "/albums/" + albumId,
+        method: 'GET'
+    }).then(function (data) {
+
     })
 }
