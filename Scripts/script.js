@@ -4,7 +4,7 @@
 var root = 'https://jsonplaceholder.typicode.com';
 // to keep track of the number of posts that are currently displayed
 var counter = 0;
-var username;
+var username = "";
 
 function loadData() {
     loadPosts();
@@ -17,26 +17,7 @@ function loadPosts() {
         url: root + '/posts/',
         method: 'GET'
     }).then(function (data) {
-        /*
-         <div class="leftColumn">
-         <br>
-         <div class="profilePic">
-         </div>
-         <div class="content">
-         <p class="username">
-         username
-         </p>
-         <p class="title">
-         title
-         </p>
-         <p class="actualPost">
-         akjuhyb ijuygtv uhy6tfr uhygb aasdnhb
-         </p>
-         </div>
-         </div>
-         */
         var postSectionP = document.getElementById('postSection');
-        // show the first 10 posts only
         for (var i = 0; i <= 9; i++) {
 
             getUser(data[i]['userId']);
@@ -50,6 +31,9 @@ function loadPosts() {
             var newdiv = document.createElement('div');
             newdiv.setAttribute('class', 'leftColumn');
             newdiv.appendChild(document.createElement('br'));
+            var profileImageDiv = document.createElement('div');
+            profileImageDiv.setAttribute('class', 'profilePic');
+
             var contentDiv = document.createElement('div');
             contentDiv.setAttribute('class', 'content');
 
@@ -80,6 +64,7 @@ function loadPosts() {
             contentDiv.appendChild(titlep);
             contentDiv.appendChild(actualPostp);
 
+            newdiv.appendChild(profileImageDiv);
             newdiv.appendChild(contentDiv);
 
             postSectionP.appendChild(newdiv);
@@ -95,24 +80,13 @@ function getUser(userId) {
         username = data['username'];
     })
 }
-// for the profile of each user
-function getPostsOfUser(id) {
-    $.ajax({
-        url: root + '/users/' + id + '/posts',
-        method: 'GET'
-    }).then(function (data) {
-        // function body to follow
-    })
-}
-
-// should make use of document.createElement(), and element.setAttribute()
 function viewMorePosts() {
     if (counter === 100) {
         alert("No more posts to show.");
     }
     else {
         var postSectionP = document.getElementById('postSection');
-        // show the first 10 posts only
+        // show the next 10 posts
         $.ajax({
             url: root + "/posts/",
             method: 'GET'

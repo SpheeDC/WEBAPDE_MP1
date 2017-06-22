@@ -14,6 +14,7 @@ function loadPhotos() {
             newdiv.setAttribute('class', 'pic');
             var image = document.createElement('img');
             image.src = data[i]['thumbnailUrl'];
+            image.title = data[i]['title'];
 
             // add hover on the newdiv
 
@@ -53,6 +54,7 @@ function viewMorePhotos() {
                 newdiv.setAttribute('class', 'pic');
                 var image = document.createElement('img');
                 image.src = data[i]['thumbnailUrl'];
+                image.title = data[i]['title'];
 
                 // add hover and also a pointer cursor on the image
 

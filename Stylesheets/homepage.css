@@ -36,22 +36,21 @@ section {
     height: 100%;
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 630px) {
     .leftColumn {
         width: 80%;
-        height: 700px;
-    }
-}
-@media screen and (min-width: 839px) and (max-width: 1900px) {
-    .leftColumn {
         height: 300px;
     }
 }
-
-@media screen and (min-width: 762px) and (max-width: 838px) {
+@media screen and (min-width: 1090px) and (max-width: 1900px) {
+    .leftColumn {
+        height: 250px;
+    }
+}
+@media screen and (min-width: 762px) and (max-width: 1089px) {
     .leftColumn {
         width: 70%;
-        height: 400px;
+        height: 300px;
     }
 }
 
