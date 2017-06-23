@@ -19,7 +19,6 @@ function loadPhotos() {
             var fullImageUrl = data[i]['url'];
 
             // add hover on the newdiv
-
             $(newdiv).hover(function () {
                 $(this).css("cursor", "pointer");
                $(this).css("-webkit-filter", "grayscale(75%)");
@@ -29,22 +28,7 @@ function loadPhotos() {
                 $(this).css("filter", "grayscale(0%)");
             });
 
-            $(newdiv).click(function () {
-                var modal = document.getElementById('photoModal');
-                var fullImage = document.getElementById("fullImage");
-                var captionText = document.getElementById("caption");
-                modal.style.display = "block";
-                //noinspection JSReferencingMutableVariableFromClosure
-                fullImage.src = fullImageUrl;
-                //noinspection JSReferencingMutableVariableFromClosure
-                captionText.innerHTML = image.title;
-
-                var span = document.getElementsByClassName("closePic")[0];
-
-                span.onclick = function() {
-                    modal.style.display = "none";
-                }
-            });
+            //$(newdiv).click(showModal(fullImageUrl, image.title));
             newdiv.appendChild(image);
             photoc.appendChild(newdiv);
         }
@@ -86,22 +70,7 @@ function viewMorePhotos() {
                     $(this).css("-webkit-filter", "grayscale(0%)");
                     $(this).css("filter", "grayscale(0%)");
                 });
-                $(newdiv).click(function () {
-                    var modal = document.getElementById('photoModal');
-                    var fullImage = document.getElementById("fullImage");
-                    var captionText = document.getElementById("caption");
-                    modal.style.display = "block";
-                    //noinspection JSReferencingMutableVariableFromClosure
-                    fullImage.src = fullImageUrl;
-                    //noinspection JSReferencingMutableVariableFromClosure
-                    captionText.innerHTML = image.title;
-
-                    var span = document.getElementsByClassName("closePic")[0];
-
-                    span.onclick = function() {
-                        modal.style.display = "none";
-                    }
-                });
+                //image.onclick = showModal(fullImageUrl, image.title);
                 newdiv.appendChild(image);
                 photoc.appendChild(newdiv);
             }
@@ -110,6 +79,22 @@ function viewMorePhotos() {
     }
 }
 
+function showModal(url, title) {
+    var modal = document.getElementById('photoModal');
+    var fullImage = document.getElementById("fullImage");
+    var captionText = document.getElementById("caption");
+    modal.style.display = "block";
+    //noinspection JSReferencingMutableVariableFromClosure
+    fullImage.src = url;
+    //noinspection JSReferencingMutableVariableFromClosure
+    captionText.innerHTML = title;
+
+    var span = document.getElementsByClassName("closePic")[0];
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+}
 function getAlbumName(albumId) {
     $.ajax({
         url: root + "/albums/" + albumId,

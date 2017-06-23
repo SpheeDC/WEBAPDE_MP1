@@ -39,12 +39,12 @@ section {
 @media screen and (max-width: 630px) {
     .leftColumn {
         width: 80%;
-        height: 300px;
+        height: 400px;
     }
 }
 @media screen and (min-width: 1090px) and (max-width: 1900px) {
     .leftColumn {
-        height: 250px;
+        height: 275px;
     }
 }
 @media screen and (min-width: 762px) and (max-width: 1089px) {
@@ -57,6 +57,6 @@ section {
 @media screen and (min-width: 350px) and (max-height: 736px) {
     .leftColumn {
         width: 75%;
-        height: 400px;
+        height: 500px;
     }
 }
