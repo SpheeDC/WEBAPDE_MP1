@@ -4,8 +4,6 @@
 var root = 'https://jsonplaceholder.typicode.com';
 // to keep track of the number of posts that are currently displayed
 var counter = 0;
-var username = "";
-
 function loadData() {
     loadPosts();
     // show only the first 10 posts
@@ -18,13 +16,13 @@ function loadPosts() {
         method: 'GET'
     }).then(function (data) {
         var postSectionP = document.getElementById('postSection');
-        for (var i = 0; i <= 9; i++) {
+        for (var i = 0; i < 10; i++) {
 
-            getUser(data[i]['userId']);
+            var usernameP = getUser(data[i]['userId'], getUsername);
             var mainContent = data[i]['body'];
             var mainTitle = data[i]['title'];
 
-            var nameOfUser = document.createTextNode("@" + username);
+            var nameOfUser = document.createTextNode("@" + usernameP);
             var realTitle = document.createTextNode(mainTitle);
             var contentReal = document.createTextNode(mainContent);
 
@@ -72,12 +70,17 @@ function loadPosts() {
         }
     });
 }
-function getUser(userId) {
+
+function getUsername(username) {
+    return username;
+}
+function getUser(userId, callback) {
+    console.log(userId);
     $.ajax({
         url: root + "/users/" + userId,
         method: 'GET'
     }).then(function (data) {
-        username = data['username'];
+        callback(data['username']);
     })
 }
 function viewMorePosts() {
@@ -93,11 +96,11 @@ function viewMorePosts() {
         }).then(function (data) {
             for (var i = counter; i < counter + 10; i++) {
 
-                getUser(data[i]['userId']);
+                var usernameP = getUser(data[i]['userId'], getUsername);
                 var mainContent = data[i]['body'];
                 var mainTitle = data[i]['title'];
 
-                var nameOfUser = document.createTextNode("@" + username);
+                var nameOfUser = document.createTextNode("@" + usernameP);
                 var realTitle = document.createTextNode(mainTitle);
                 var contentReal = document.createTextNode(mainContent);
 

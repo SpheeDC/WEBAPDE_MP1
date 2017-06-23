@@ -8,7 +8,11 @@ function loadAlbums() {
         "method": 'GET'
     }).then(function(data) {
         console.log("I passed thru here.");
-        photos = data;
+        for (var i = 0; i <= 10; i++) {
+            // create the divs
+
+
+        }
     })
 }
 

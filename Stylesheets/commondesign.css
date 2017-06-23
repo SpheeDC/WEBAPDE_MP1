@@ -19,6 +19,22 @@ nav ul li {
     display: inline;
 }
 
+#alternativeNavbar {
+    text-align: center;
+}
+
+#alternativeNavbar li {
+    display: none;
+    list-style-type: none;
+}
+#alternativeNavbar li > a[title="Albums"], #alternativeNavbar li > a[title="Photos"], #alternativeNavbar li > a[title="Home"] {
+    font-size: 20px;
+    color: white;
+}
+#alternativeNavbar li > a[title="Albums"]:hover, #alternativeNavbar li > a[title="Photos"]:hover, #alternativeNavbar li > a[title="Home"]:hover {
+    cursor: pointer;
+    color: darkorange;
+}
 h3#mainTitle {
     font-size: x-large;
     text-align: center;
@@ -54,6 +70,11 @@ h3#mainTitle {
     nav ul li {
         display: none;
 
+    }
+    #alternativeNavbar li {
+        display: inline;
+        list-style-type: none;
+        font-family: "Helvetica Neue", sans-serif;
     }
 }
 

@@ -16,6 +16,8 @@ function loadPhotos() {
             image.src = data[i]['thumbnailUrl'];
             image.title = data[i]['title'];
 
+            var fullImageUrl = data[i]['url'];
+
             // add hover on the newdiv
 
             $(newdiv).hover(function () {
@@ -25,6 +27,23 @@ function loadPhotos() {
             }, function () {
                 $(this).css("-webkit-filter", "grayscale(0%)");
                 $(this).css("filter", "grayscale(0%)");
+            });
+
+            $(newdiv).click(function () {
+                var modal = document.getElementById('photoModal');
+                var fullImage = document.getElementById("fullImage");
+                var captionText = document.getElementById("caption");
+                modal.style.display = "block";
+                //noinspection JSReferencingMutableVariableFromClosure
+                fullImage.src = fullImageUrl;
+                //noinspection JSReferencingMutableVariableFromClosure
+                captionText.innerHTML = image.title;
+
+                var span = document.getElementsByClassName("closePic")[0];
+
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
             });
             newdiv.appendChild(image);
             photoc.appendChild(newdiv);
@@ -56,6 +75,7 @@ function viewMorePhotos() {
                 image.src = data[i]['thumbnailUrl'];
                 image.title = data[i]['title'];
 
+                var fullImageUrl = data[i]['url'];
                 // add hover and also a pointer cursor on the image
 
                 $(image).hover(function () {
@@ -65,6 +85,22 @@ function viewMorePhotos() {
                 }, function () {
                     $(this).css("-webkit-filter", "grayscale(0%)");
                     $(this).css("filter", "grayscale(0%)");
+                });
+                $(newdiv).click(function () {
+                    var modal = document.getElementById('photoModal');
+                    var fullImage = document.getElementById("fullImage");
+                    var captionText = document.getElementById("caption");
+                    modal.style.display = "block";
+                    //noinspection JSReferencingMutableVariableFromClosure
+                    fullImage.src = fullImageUrl;
+                    //noinspection JSReferencingMutableVariableFromClosure
+                    captionText.innerHTML = image.title;
+
+                    var span = document.getElementsByClassName("closePic")[0];
+
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    }
                 });
                 newdiv.appendChild(image);
                 photoc.appendChild(newdiv);
