@@ -12,6 +12,7 @@ function loadPhotos() {
         for (var i = 0; i < 10; i++) {
             var newdiv = document.createElement('div');
             newdiv.setAttribute('class', 'pic');
+            newdiv.setAttribute('alt', String(i));
             var image = document.createElement('img');
             image.src = data[i]['thumbnailUrl'];
             image.title = data[i]['title'];
@@ -19,16 +20,16 @@ function loadPhotos() {
             var fullImageUrl = data[i]['url'];
 
             // add hover on the newdiv
-            $(newdiv).hover(function () {
+
+            $(image).hover(function () {
                 $(this).css("cursor", "pointer");
-               $(this).css("-webkit-filter", "grayscale(75%)");
-               $(this).css("filter", "grayscale(75%)");
+                $(this).css("-webkit-filter", "grayscale(100%)");
+                $(this).css("filter", "grayscale(100%)");
             }, function () {
                 $(this).css("-webkit-filter", "grayscale(0%)");
                 $(this).css("filter", "grayscale(0%)");
             });
 
-            //$(newdiv).click(showModal(fullImageUrl, image.title));
             newdiv.appendChild(image);
             photoc.appendChild(newdiv);
         }
